@@ -20,16 +20,44 @@ h1,h2,h3,h4,h5,h6 {
     padding: 1em 0 0;
 }
 h1 {
-    font-size: 7vw;
+    font-size: 2.5rem;
 }
 h2 {
-    font-size: 6vw;
+    font-size: 2rem;
 }
 h3 {
-    font-size: 5vw;
+    font-size: 1.8rem;
 }
 h4 {
-    font-size: 4vw;
+    font-size: 1.5rem;
+}
+@media screen and (min-width: 20rem) {
+    h1 {
+        font-size: calc(2.5rem + 2 * ((100vw - 20rem) / 60));
+    }
+    h2 {
+        font-size: calc(2rem + 2 * ((100vw - 20rem) / 60));
+    }
+    h3 {
+        font-size: calc(1.8rem + 2 * ((100vw - 20rem) / 60));
+    }
+    h4 {
+        font-size: calc(1.5rem + 2 * ((100vw - 20rem) / 60));
+    }
+} 
+@media screen and (min-width: 80rem) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3.8rem;
+    }
+    h4 {
+        font-size: 3.5rem;
+    }
 }
 p, ul, ol, li {
     margin: 0;
@@ -73,29 +101,40 @@ main,
 footer > div {
     margin: 0 auto;
     padding: 1rem;
-    max-width: 35rem;
+    max-width: 40rem;
 }
 
 nav {
     font-variant: small-caps;
     font-size: 1.25rem;
     letter-spacing: 0.1em;
-    margin: 0 auto;
-    padding: 1rem;
-    max-width: 35rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+}
+nav > * {
+    display: block;
+}
+@media screen and (min-width: 30rem) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 nav a {
     text-decoration: none;
 }
-nav a:not(:last-child),
-nav mark:not(:last-child) {
-    padding-right: 1em;
-}
 main {
     padding-bottom: 20vh;
+    font-size: 1rem;
+}
+@media screen and (min-width: 20rem) {
+    main {
+        font-size: calc(1rem + 0.5 * ((100vw - 20rem) / 60));
+    }
+}
+@media screen and (min-width: 80rem) {
+    main {
+        font-size: 1.5rem;
+    }
 }
 main > p:first-of-type {
     font-size: 1.25em;
