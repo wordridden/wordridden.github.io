@@ -13,7 +13,7 @@
     );
 }
   
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 960px) {
     :root {
       --fluid-screen: calc(var(--fluid-max-width) * 1px);
     }
