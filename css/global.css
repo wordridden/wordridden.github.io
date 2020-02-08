@@ -1,6 +1,6 @@
  :root {
     --fluid-min-width: 240;
-    --fluid-max-width: 960;
+    --fluid-max-width: 840;
     --fluid-min-size: 16;
     --fluid-max-size: 24;
     --fluid-min-ratio: 1.2;
@@ -233,7 +233,7 @@ main,
 footer > div {
     box-sizing: border-box;
     width: 100%;
-    max-width: 60rem;
+    max-width: calc(var(--fluid-max-width) * 1px);
     margin: 0 auto;
     padding: 1.5rem;
 }
