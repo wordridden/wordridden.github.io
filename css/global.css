@@ -124,6 +124,19 @@
     );
 }
 
+@font-face {
+    font-family: 'ebgaramond';
+    src: url('/fonts/ebgaramond-variablefontwght-webfont.woff2') format('woff2');
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'ebgaramond-italic';
+    src: url('fonts/ebgaramond-italic-variablefontwght-webfont.woff2') format('woff2');
+    font-style: italic;
+    font-display: fallback;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -135,7 +148,7 @@ html {
 body {
     background-color: rgb(255,255,255);
     color: rgb(33,33,33);
-    font-family: serif;
+    font-family: 'ebgaramond', serif;
     line-height: 1.5;
     min-height: 100vh;
     display: flex;
@@ -151,8 +164,12 @@ body {
         color: rgb(204,204,204);
     }
 }
+cite,em,i,blockquote,q {
+    font-family: 'ebgaramond-italic', serif;
+}
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
+    font-family: 'ebgaramond-italic', serif;
     font-style: italic;
     line-height: 1;
     margin: 0;
@@ -210,6 +227,7 @@ mark {
 .logo {
     display: block;
     font-weight: normal;
+    font-family: 'ebgaramond-italic', serif;
     font-style: italic;
     line-height: 1;
     text-transform: lowercase;
