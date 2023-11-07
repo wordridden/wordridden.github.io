@@ -5,123 +5,14 @@
     --fluid-max-size: 24;
     --fluid-min-ratio: 1.2;
     --fluid-max-ratio: 1.25;
-  
-    --fluid-screen: 100vw;
-    --fluid-bp: calc(
-      (var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) /
-        ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16))
-    );
-}
-  
-@media screen and (min-width: 960px) {
-    :root {
-      --fluid-screen: calc(var(--fluid-max-width) * 1px);
-    }
-}
-  
-:root {
-    --fluid-max-negative: (
-      1 / var(--fluid-max-ratio) / var(--fluid-max-ratio)
-    );
-    --fluid-min-negative: (
-      1 / var(--fluid-min-ratio) / var(--fluid-min-ratio)
-    );
-  
-    --fluid-min-scale--2: var(--fluid-min-scale--1) * var(--fluid-min-ratio) *
-      var(--fluid-min-negative);
-    --fluid-max-scale--2: var(--fluid-max-scale--1) * var(--fluid-max-ratio) *
-      var(--fluid-max-negative);
-    --fluid-min-size--2: (var(--fluid-min-size) * var(--fluid-min-scale--2)) /
-      16;
-    --fluid-max-size--2: (var(--fluid-max-size) * var(--fluid-max-scale--2)) /
-      16;
-    --step--2: calc(
-      (
-        (var(--fluid-min-size--2) * 1rem) +
-          (var(--fluid-max-size--2) - var(--fluid-min-size--2)) *
-          var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale--1: var(--fluid-min-ratio) * var(--fluid-min-negative);
-    --fluid-max-scale--1: var(--fluid-max-ratio) * var(--fluid-max-negative);
-    --fluid-min-size--1: (var(--fluid-min-size) * var(--fluid-min-scale--1)) /
-      16;
-    --fluid-max-size--1: (var(--fluid-max-size) * var(--fluid-max-scale--1)) /
-      16;
-    --step--1: calc(
-      (
-        (var(--fluid-min-size--1) * 1rem) +
-          (var(--fluid-max-size--1) - var(--fluid-min-size--1)) *
-          var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale-0: var(--fluid-min-ratio);
-    --fluid-max-scale-0: var(--fluid-max-ratio);
-    --fluid-min-size-0: (var(--fluid-min-size)) / 16;
-    --fluid-max-size-0: (var(--fluid-max-size)) / 16;
-    --step-0: calc(
-      (
-        (var(--fluid-min-size-0) * 1rem) +
-          (var(--fluid-max-size-0) - var(--fluid-min-size-0)) * var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale-1: var(--fluid-min-scale-0) * var(--fluid-min-ratio);
-    --fluid-max-scale-1: var(--fluid-max-scale-0) * var(--fluid-max-ratio);
-    --fluid-min-size-1: (var(--fluid-min-size) * var(--fluid-min-scale-0)) / 16;
-    --fluid-max-size-1: (var(--fluid-max-size) * var(--fluid-max-scale-0)) / 16;
-    --step-1: calc(
-      (
-        (var(--fluid-min-size-1) * 1rem) +
-          (var(--fluid-max-size-1) - var(--fluid-min-size-1)) * var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale-2: var(--fluid-min-scale-1) * var(--fluid-min-ratio);
-    --fluid-max-scale-2: var(--fluid-max-scale-1) * var(--fluid-max-ratio);
-    --fluid-min-size-2: (var(--fluid-min-size) * var(--fluid-min-scale-1)) / 16;
-    --fluid-max-size-2: (var(--fluid-max-size) * var(--fluid-max-scale-1)) / 16;
-    --step-2: calc(
-      (
-        (var(--fluid-min-size-2) * 1rem) +
-          (var(--fluid-max-size-2) - var(--fluid-min-size-2)) * var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale-3: var(--fluid-min-scale-2) * var(--fluid-min-ratio);
-    --fluid-max-scale-3: var(--fluid-max-scale-2) * var(--fluid-max-ratio);
-    --fluid-min-size-3: (var(--fluid-min-size) * var(--fluid-min-scale-2)) / 16;
-    --fluid-max-size-3: (var(--fluid-max-size) * var(--fluid-max-scale-2)) / 16;
-    --step-3: calc(
-      (
-        (var(--fluid-min-size-3) * 1rem) +
-          (var(--fluid-max-size-3) - var(--fluid-min-size-3)) * var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale-4: var(--fluid-min-scale-3) * var(--fluid-min-ratio);
-    --fluid-max-scale-4: var(--fluid-max-scale-3) * var(--fluid-max-ratio);
-    --fluid-min-size-4: (var(--fluid-min-size) * var(--fluid-min-scale-3)) / 16;
-    --fluid-max-size-4: (var(--fluid-max-size) * var(--fluid-max-scale-3)) / 16;
-    --step-4: calc(
-      (
-        (var(--fluid-min-size-4) * 1rem) +
-          (var(--fluid-max-size-4) - var(--fluid-min-size-4)) * var(--fluid-bp)
-      )
-    );
-  
-    --fluid-min-scale-5: var(--fluid-min-scale-4) * var(--fluid-min-ratio);
-    --fluid-max-scale-5: var(--fluid-max-scale-4) * var(--fluid-max-ratio);
-    --fluid-min-size-5: (var(--fluid-min-size) * var(--fluid-min-scale-4)) / 16;
-    --fluid-max-size-5: (var(--fluid-max-size) * var(--fluid-max-scale-4)) / 16;
-    --step-5: calc(
-      (
-        (var(--fluid-min-size-5) * 1rem) +
-          (var(--fluid-max-size-5) - var(--fluid-min-size-5)) * var(--fluid-bp)
-      )
-    );
+    --step--2: clamp(0.6944rem, 0.5881rem + 0.7083vw, 0.96rem);
+    --step--1: clamp(0.8331rem, 0.6864rem + 0.9783vw, 1.2rem);
+    --step-0: clamp(1rem, 0.8rem + 1.3333vw, 1.5rem);
+    --step-1: clamp(1.2rem, 0.93rem + 1.8vw, 1.875rem);
+    --step-2: clamp(1.44rem, 1.0785rem + 2.41vw, 2.3438rem);
+    --step-3: clamp(1.7281rem, 1.2474rem + 3.205vw, 2.93rem);
+    --step-4: clamp(2.0738rem, 1.4385rem + 4.235vw, 3.6619rem);
+    --step-5: clamp(2.4881rem, 1.6524rem + 5.5717vw, 4.5775rem);
 }
 
 @font-face {
@@ -132,7 +23,7 @@
 }
 @font-face {
     font-family: 'ebgaramond-italic';
-    src: url('fonts/ebgaramond-italic-variablefontwght-webfont.woff2') format('woff2');
+    src: url('/fonts/ebgaramond-italic-variablefontwght-webfont.woff2') format('woff2');
     font-style: italic;
     font-display: fallback;
 }
@@ -150,19 +41,23 @@ body {
     color: rgb(33,33,33);
     font-family: 'ebgaramond', serif;
     line-height: 1.5;
-    min-height: 100vh;
+    min-block-size: 100vb;
     display: flex;
     flex-direction: column;
 }
 @media screen and (prefers-color-scheme: dark) {
     html {
         background-color: black;
-        color: color;
+        color: white;
     }
     body {
         background-color: rgb(33,33,33);
         color: rgb(204,204,204);
     }
+}
+img {
+  max-inline-size: 100%;
+  block-size: auto;
 }
 cite,em,i,blockquote,q {
     font-family: 'ebgaramond-italic', serif;
@@ -173,7 +68,7 @@ h1,h2,h3,h4,h5,h6 {
     font-style: italic;
     line-height: 1;
     margin: 0;
-    padding: 1em 0 0;
+    padding-block-start: 1em;
 }
 h1 {
     font-size: var(--step-4);
@@ -189,7 +84,7 @@ h4 {
 }
 p, ul, ol, li {
     margin: 0;
-    padding: 1em 0 0;
+    padding-block-start: 1em;
 }
 a:link {
     color: rgb(204,0,0);
@@ -250,10 +145,11 @@ nav,
 main,
 footer > div {
     box-sizing: border-box;
-    width: 100%;
-    max-width: calc(var(--fluid-max-width) * 1px);
-    margin: 0 auto;
-    padding: 1.5rem;
+    inline-size: 100%;
+    max-inline-size: 35em;
+    margin-block: 0;
+    margin-inline: auto;
+    padding: var(--step--2);
 }
 
 nav {
@@ -264,7 +160,7 @@ nav {
 nav > * {
     display: block;
 }
-@media screen and (min-width: 30rem) {
+@media all and (min-width: 30rem) {
     nav {
         display: flex;
         justify-content: space-between;
@@ -277,7 +173,7 @@ nav a {
 main {
     flex: 1;
     font-size: var(--step-0);
-    padding-bottom: 2em;
+    padding-block-end: var(--step--4);
 }
 main > p:first-of-type {
     font-size: var(--step-1);
@@ -286,4 +182,31 @@ main > p:first-of-type {
 footer {
     background-color: rgb(51,51,51);
     color: rgb(255,255,255);
+}
+
+.bookshelf {
+    display: grid;
+    margin-block: var(--step-5);
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+}
+@media all and (min-width: 35em) {
+    .bookshelf {
+        margin-inline: calc((35em - 100vi) /2);
+    }
+}
+@media all and (min-width: 60em) {
+    .bookshelf {
+        grid-template-columns: repeat(auto-fill, minmax(12.5em, 1fr));
+    }
+}
+@media all and (min-width: 90em) {
+    .bookshelf {
+        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    }
+}
+.bookshelf img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
