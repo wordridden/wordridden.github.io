@@ -202,12 +202,7 @@ footer {
 }
 @media all and (min-width: 90em) {
     .bookshelf {
-        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    }
-}
-@media all and (min-width: 115em) {
-    .bookshelf {
-        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     }
 }
 .bookshelf img {
