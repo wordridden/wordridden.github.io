@@ -173,7 +173,7 @@ nav a {
 main {
     flex: 1;
     font-size: var(--step-0);
-    padding-block-end: var(--step--4);
+    padding-block-end: var(--step-4);
 }
 main > p:first-of-type {
     font-size: var(--step-1);
