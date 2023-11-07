@@ -205,6 +205,11 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     }
 }
+@media all and (min-width: 115em) {
+    .bookshelf {
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    }
+}
 .bookshelf img {
   inline-size: 100%;
   block-size: 100%;
