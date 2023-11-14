@@ -28,6 +28,7 @@
                         src="/img/small/how-the-west-lost-the-peace.jpg"
                         alt="How the West Lost the Peace: The Great Transformation Since the Cold War, by Philipp Ther."
                         srcset="/img/small/how-the-west-lost-the-peace.jpg 320w, /img/medium/how-the-west-lost-the-peace.jpg 480w, /img/large/how-the-west-lost-the-peace.jpg 640w"
+                        fetchpriority="high"
                         width="320" height="500">
                     </picture>
                 </a>
@@ -147,5 +148,15 @@
                 <p>&copy; Jessica Spengler</p>
             </div>
         </footer>
+        <script type="speculationrules">
+            {
+              "prerender": [
+                {
+                  "source": "list",
+                  "urls": ["/about/", "/clients/"]
+                }
+              ]
+            }
+          </script>
     </body>
 </html>
